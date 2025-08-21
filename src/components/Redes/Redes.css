@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+@layer components {
+    @media (max-width: 640px) {
+        .redes {
+            @apply flex gap-1 w-full border-t-1 border-[#F0F2F5] h-full;
+        }
+    }
+}

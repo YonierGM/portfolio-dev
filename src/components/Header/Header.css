@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@layer components {
+
+  @media (max-width: 320px) {
+    .open-menu-mobile {
+      @apply w-[100%!important];
+    }
+  }
+
+  @media (min-width: 639px){
+    .menu-mobile{
+      @apply min-sm:h-full flex justify-center items-center;
+    }
+    .opciones{
+      @apply flex justify-center items-center
+    }
+
+    .opciones li{
+      @apply h-1/2 flex justify-center items-center px-4 bg-[#F0F2F5] rounded-lg text-[#303235] hover:text-[#0e0f0f] hover:bg-blue-50 transition-colors duration-300
+    }
+  }
+
+  @media (max-width: 639px) {
+    .menu-mobile {
+      @apply grid grid-rows-[10dvh_80dvh_10dvh] bg-white absolute w-[80%] top-0 h-[100dvh]
+             transition-all duration-300 ease-in-out border-r-1 border-[#F0F2F5];
+    }
+
+    /* Estado cerrado */
+    .menu-mobile.closed {
+      @apply -left-full;
+    }
+
+    /* Estado abierto */
+    .menu-mobile.open {
+      @apply left-0;
+    }
+    
+    .header-menu {
+      @apply flex justify-between items-center p-1.5 text-black bg-[#F0F2F5] h-[10dvh] border-b-1 border-[#F0F2F5];
+    }
+
+    .opciones {
+      @apply flex flex-col p-4;
+    }
+
+    .item-li {
+      @apply grid grid-cols-[auto_1fr] items-center gap-3 pl-0 p-4 hover:bg-[#F0F2F5] transition-colors duration-300 text-black rounded-md cursor-pointer;
+    }
+
+    .item-li .icon{
+      @apply bg-gray-100 hover:bg-[#F0F2F5] transition-colors duration-300 p-2 rounded-md min-sm:hidden text-gray-900;
+    }
+
+  }
+}

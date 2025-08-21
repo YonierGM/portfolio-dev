@@ -1,0 +1,145 @@
+{
+"skillCategories": [
+    {
+      "title": "Frontend Development",
+      "icon": "fa-solid fa-code",
+      "color": "bg-gradient-to-r from-blue-500 to-cyan-500",
+      "base": "bg-gradient-to-r from-blue-50 to-cyan-50",
+      "skills": [
+        { "name": "html", "icon": "fab fa-html5", "color": "text-[#E34F26]" },
+        { "name": "css", "icon": "fab fa-css3-alt", "color": "text-[#0082F0]" },
+        { "name": "JavaScript", "icon": "fab fa-js", "color": "text-[#F7DF1E]" },
+        { "name": "React", "icon": "fab fa-react", "color": "text-[#61DAFB]" },
+        { "name": "Angular", "icon": "fab fa-angular", "color": "text-[#DD0031]" },
+        { "name": "Tailwind CSS", "icon": "fa-solid fa-wave-square", "color": "text-[#38BDF8]" }
+      ]
+    },
+    {
+      "title": "Backend Development",
+      "icon": "fas fa-server",
+      "color": "bg-gradient-to-r from-green-500 to-emerald-500",
+      "base": "bg-gradient-to-r from-green-50 to-emerald-50",
+      "skills": [
+        { "name": "JavaScript", "icon": "fab fa-js", "color": "text-[#F7DF1E]" },
+        { "name": "Node.js", "icon": "fab fa-node", "color": "text-[#339933]" },
+        { "name": "Express.js", "icon": "fas fa-server", "color": "text-[#000000]" },
+        { "name": "Python", "icon": "fab fa-python", "color": "text-[#3776AB]" },
+        { "name": "FastAPI", "icon": "fas fa-server", "color": "text-[#009688]" }
+      ]
+    },
+    {
+      "title": "Inteligencia Artificial",
+      "icon": "fas fa-robot",
+      "color": "bg-gradient-to-r from-purple-500 to-pink-500",
+      "base": "bg-gradient-to-r from-purple-50 to-pink-50",
+      "skills": [
+        { "name": "n8n", "icon": "fas fa-robot", "color": "text-[#EA4B71]" },
+        { "name": "Python", "icon": "fab fa-python", "color": "text-[#3776AB]" },
+        { "name": "OpenAI API", "icon": "fa-brands fa-openai", "color": "text-[#000000]" },
+        { "name": "ChatGPT", "icon": "fa-brands fa-openai", "color": "text-[#000000]" },
+        { "name": "Ollama", "icon": "fas fa-horse", "color": "text-[#000000]" },
+        { "name": "LangChain", "icon": "fas fa-kiwi-bird", "color": "text-[#1C3C3C]" },
+        { "name": "Watsonx Assistant", "icon": "fa-solid fa-comment", "color": "text-[#000000]" }
+      ]
+    },
+    {
+      "title": "Base de Datos",
+      "icon": "fas fa-database",
+      "color": "bg-gradient-to-r from-orange-500 to-red-500",
+      "base": "bg-gradient-to-r from-orange-50 to-red-50",
+      "skills": [
+        { "name": "PostgreSQL", "icon": "fas fa-database", "color": "text-[#336791]" },
+        { "name": "MySQL", "icon": "fas fa-database", "color": "text-[#4479A1]" },
+        { "name": "MongoDB", "icon": "fas fa-database", "color": "text-[#47A248]" },
+        { "name": "Redis", "icon": "fas fa-database", "color": "text-[#DC382D]" }
+      ]
+    }
+  ],
+  "tools": [
+    "AWS",
+    "Code Engine",
+    "Vercel",
+    "Docker",
+    "Git",
+    "Figma",
+    "Postman",
+    "Vite",
+    "ePayco"
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "title": "Sistema RAG",
+      "description": "Implementación de un sistema RAG(Recuperación Aumentada por Generación) que integra modelos de lenguaje local con búsqueda semántica en bases vectoriales, permitiendo responder preguntas de forma precisa y contextualizada a partir de datos propios.",
+      "technologies": ["Python", "FastAPI", "LangChain", "Ollama", "ChromaDB", "Docker", "Redis", "React", "html", "css", "JavaScript"],
+      "github": "https://github.com/YonierGM/ollama-rag-chat",
+      "demo": "#",
+      "color": "from-orange-500 to-red-500",
+      "image": "/portfolio/rag.webp"
+    },
+    {
+      "id": 2,
+      "title": "E-commerce",
+      "description": "Plataforma de comercio electrónico, pagos en linea integrados mediante ePayco.",
+      "technologies": ["React", "html", "css", "JavaScript"],
+      "category": "Web",
+      "github": "https://github.com/YonierGM/vibras-store-frontend",
+      "demo": "https://store-vibras.vercel.app/",
+      "color": "from-purple-500 to-pink-500",
+      "image": "/portfolio/vibras-store.webp"
+    },
+    {
+      "id": 3,
+      "title": "Landing page de presentación",
+      "description": "Entera2 es una landing page que expone, mediante testimonios, las barreras que enfrentan jóvenes en Colombia para acceder a oportunidades, y plantea la base de una futura plataforma que conectará personas con programas y convocatorias.",
+      "technologies": ["React", "tailwindcss", "TypeScript", "JavaScript", "html", "css"],
+      "category": "Web",
+      "github": "https://github.com/YonierGM/entera2-desafio-creativo",
+      "demo": "https://entera2.vercel.app/",
+      "color": "from-blue-500 to-cyan-500",
+      "image": "/portfolio/entera2.webp"
+    },
+    {
+      "id": 4,
+      "title": "Pagina web de nutrición",
+      "description": "Es una landing page funcional que ofrece una calculadora interactiva de tasa metabólica basal, permitiendo a los usuarios calcular sus necesidades calóricas según sexo, edad, peso, altura y nivel de actividad física.",
+      "technologies": ["React", "html", "css", "JavaScript"],
+      "category": "Web",
+      "github": "https://github.com/YonierGM/Cliente-nutricion---Calculadora-TMB-",
+      "demo": "https://nutricion-eta.vercel.app/",
+      "color": "from-green-500 to-emerald-500",
+      "image": "/portfolio/caloria.webp"
+    },
+    {
+      "id": 5,
+      "title": "Validación de formulario",
+      "description": "Permite a los usuarios registrarse mediante un formulario que valida la entrada en tiempo real, asegurando que los datos ingresados cumplan con los requisitos especificados antes de permitir el envío.",
+      "technologies": ["React", "html", "css", "JavaScript"],
+      "category": "Web",
+      "github": "https://github.com/YonierGM/Formulario-con-React-Hook-Form-y-Zod",
+      "demo": "https://react-hook-form-beta-three.vercel.app/",
+      "color": "from-green-500 to-emerald-500",
+      "image": "/portfolio/formulario.webp"
+    }
+  ],
+  "achievements": [
+    { "title": "Ingeniería de Sistemas", "by": "Universidad del Pacífico", "year": "2022", "icon": "fa-solid fa-graduation-cap" },
+    { "title": "Developing Front-End Apps with React", "by": "IBM", "year": "2025", "icon": "fa-solid fa-award" },
+    { "title": "Grnerative AI Essentials", "by": "IBM", "year": "2025", "icon": "fa-solid fa-award" },
+    { "title": "Artificial Intelligence Essentials V2", "by": "IBM", "year": "2025", "icon": "fa-solid fa-award" },
+    { "title": "watsonx.data Sales Foundation", "by": "IBM", "year": "2024", "icon": "fa-solid fa-award" },
+    { "title": "watsonx.ai Technival Sales Intermediate", "by": "IBM", "year": "2024", "icon": "fa-solid fa-award" },
+    { "title": "watsonx.ai Sales Foundation", "by": "IBM", "year": "2024", "icon": "fa-solid fa-award" },
+    { "title": "Lenguajes de Programación Javascript", "by": "Universidad Distrital Francisco José de Caldas & Generación TIC", "year": "2023", "icon": "fa-solid fa-award" },
+    { "title": "Desarrollo web con PHP", "by": "SENA", "year": "2023", "icon": "fa-solid fa-award" },
+    { "title": "Fundamentos profesionales del desarrollo de software", "by": "Microsoft & LinkedIn", "year": "2023", "icon": "fa-solid fa-award" },
+    { "title": "Diseño web profesional", "by": "Udemy", "year": "2022", "icon": "fa-solid fa-award" },
+    { "title": "Angular 11", "by": "Udemy", "year": "2022", "icon": "fa-solid fa-award" }
+  ],
+  "contact": [
+    {"title": "Email", "value": "yoniermosquera55@gmail.com", "icon": "fa-solid fa-envelope"},
+    {"title": "Celular", "value": "3182413489", "icon": "fa-solid fa-phone"},
+    {"title": "Ubicación", "value": "Valle del Cauca, Colombia", "icon": "fa-solid fa-location-dot"}
+
+  ]
+}
