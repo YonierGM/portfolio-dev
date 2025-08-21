@@ -1,4 +1,4 @@
-# 🌐 Portafolio de Yonier Garcia Mosquera
+# 🌐 Portafolio
 
 ¡Bienvenido/a a mi portafolio! 🚀  
 Soy **Desarrollador Full Stack** e **Ingeniero de Sistemas**, apasionado por crear soluciones web a medida, automatizaciones y aplicaciones con Inteligencia Artificial.
