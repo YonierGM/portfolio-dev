@@ -4,6 +4,7 @@ import { ProjectList } from "./ProjectsList";
 import { FormContact } from "../components/Form/FormContact/FormContact";
 import { Footer } from "../components/Footer/Footer";
 import { AboutSkills } from "../components/AboutMe/AboutSkills";
+import { FormContactMinimal } from "../components/Form/FormContact/FormContactMinimal";
 
 export function Home() {
   return (
@@ -17,7 +18,7 @@ export function Home() {
         
         {/* Solo visible en desktop */}
         <div className="formContact hidden sm:block">
-          <FormContact />
+          <FormContactMinimal />
         </div>
       </div>
 
@@ -34,7 +35,7 @@ export function Home() {
 
       {/* Mueve FormContact aquí, fuera del sidebar */}
       <div className="formContact block sm:hidden">
-        <FormContact />
+        <FormContactMinimal />
       </div>
       <div className="footer">
         <Footer />

@@ -1,5 +1,4 @@
-import { FormContactMinimal } from "../components/Form/FormContact/Minimal";
-import { InfoContacto } from "../components/InfoContacto/InfoContacto";
+import { FormContact } from "../components/Form/FormContact/FormContact";
 import { Footer } from "../components/Footer/Footer"
 export function Contact() {
   return (
@@ -7,11 +6,8 @@ export function Contact() {
       className="flex gap-4 w-full flex-col"
     >
       <div className="content max-sm:flex-col flex justify-center gap-4">
-        {/* <div className="">
-          <InfoContacto />
-        </div> */}
         <div className="">
-          <FormContactMinimal />
+          <FormContact />
         </div>
       </div>
       <div className="footer">

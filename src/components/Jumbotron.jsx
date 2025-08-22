@@ -1,4 +1,4 @@
-import { Redes } from "./Redes/Redes";
+
 export function Jumbotron() {
   return (
 
@@ -13,9 +13,6 @@ export function Jumbotron() {
           </div>
         </div>
         <p className="font-normal text-[18px] leading-7 text-gray-800 max-sm:text-lg transition-all bg-white px-4 py-2 hover:shadow-md duration-300 rounded-2xl">Desarrollador de software full stack con experiencia en la creación de soluciones a medida que integran frontend, backend e inteligencia artificial.</p>
-        <div className="redes flex justify-start items-start mt-1">
-          <Redes />
-        </div>
     </section>
 
   );
