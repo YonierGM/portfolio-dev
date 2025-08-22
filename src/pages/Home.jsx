@@ -1,7 +1,6 @@
 import { Education } from "../components/Education/Education";
 import { Jumbotron } from "../components/Jumbotron";
 import { ProjectList } from "./ProjectsList";
-import { FormContact } from "../components/Form/FormContact/FormContact";
 import { Footer } from "../components/Footer/Footer";
 import { AboutSkills } from "../components/AboutMe/AboutSkills";
 import { FormContactMinimal } from "../components/Form/FormContact/FormContactMinimal";
