@@ -1,12 +1,55 @@
-# React + Vite
+# 🌐 Portafolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+¡Bienvenido/a a mi portafolio! 🚀  
+Soy **Desarrollador Full Stack** e **Ingeniero de Sistemas**, apasionado por crear soluciones web a medida, automatizaciones y aplicaciones con Inteligencia Artificial.
 
-Currently, two official plugins are available:
+## 🧑‍💻 Sobre mí
+- 💻 Experiencia en desarrollo **frontend** y **backend**.
+- 🗄 Gestión y optimización de bases de datos SQL y NoSQL.
+- 🤖 Integraciones con **IA** (LangChain, Ollama, Watsonx, OpenAI API).
+- ⚡ Enfoque en optimización, escalabilidad y buen diseño de software.
+- 📍 Actualmente en Buenaventura, Colombia.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 💡 Habilidades Técnicas
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 🎨 Frontend Development
+- HTML  
+- CSS  
+- JavaScript  
+- React  
+- Angular  
+- Tailwind CSS  
+
+### ⚙️ Backend Development
+- JavaScript  
+- Node.js  
+- Express.js  
+- Python  
+- FastAPI  
+
+### 🤖 Inteligencia Artificial
+- n8n  
+- Python  
+- OpenAI API  
+- ChatGPT  
+- Ollama  
+- LangChain  
+- Watsonx Assistant  
+
+### 🗄 Base de Datos
+- PostgreSQL  
+- MySQL  
+- MongoDB  
+- Redis  
+
+---
+
+## 📫 Contacto
+- 💼 [LinkedIn](https://www.linkedin.com/in/yoniergm/)
+- 📧 **yoniermosquera55@gmail.com**
+- 🐙 [GitHub](https://github.com/YonierGM)
+
+---
+💡 *Si te gusta mi trabajo, no dudes en seguirme o contactarme para colaborar.*
