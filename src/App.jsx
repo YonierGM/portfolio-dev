@@ -17,7 +17,7 @@ function App() {
         <div className="header z-50 w-full sticky top-0 max-sm:h-14 sm:h-16">
           <Header />
         </div>
-        <div className="content flex flex-col items-center justify-center">
+        <div className="content flex flex-col items-center">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/inicio" element={<Home />} />

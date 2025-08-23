@@ -12,8 +12,8 @@ export function ProjectDetail(){
 
     return(
         <>
-        <section className="min-sm:w-[80%] w-full pt-14">
-            <div className="card border min-sm:w-1/2 h-full m-auto border-gray-200 rounded-lg overflow-hidden shadow-md bg-white hover:shadow-xl transition-shadow duration-300">
+        <section className="min-sm:w-[80%] w-full">
+            <div className="card border min-sm:w-1/2 m-auto border-gray-200 rounded-lg overflow-hidden shadow-md bg-white hover:shadow-xl transition-shadow duration-300">
                 <div className={`card-header ${proyecto.color} flex justify-between items-center`}>
                   <img className="object-cover" src={proyecto.image} alt="" />
                 </div>
