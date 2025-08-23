@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { formContactSchema } from "../../../schemas/contact";
+import { useN8nWebhook } from "../../../hooks/useN8nWebhook";
 
 export function FormContact() {
   const {
@@ -11,9 +12,18 @@ export function FormContact() {
   } = useForm({
     resolver: zodResolver(formContactSchema),
   });
-    const onSubmit = (data) => {
-    console.log("Datos del formulario:", data);
-    reset();
+
+  const { sendToWebhook, loading, error, success } = useN8nWebhook(
+    "https://n8n-to6s.onrender.com/webhook/3b91754d-326b-4a8f-a40c-6486656b1341"
+  );
+
+  const onSubmit = async (data) => {
+    try {
+      await sendToWebhook(data);
+      reset();
+    } catch {
+      // El error ya está manejado en el hook
+    }
   };
 
   return (
@@ -67,7 +77,13 @@ export function FormContact() {
 <p className="text-red-500 text-sm">{errors.message.message}</p>
 )}
           </div>
-          <button type="submit" className="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-blue-500 w-full hover:bg-blue-700 transition-colors duration-300 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 cursor-pointer">Enviar</button>
+          
+          <button type="submit" className="py-3 w-full px-5 text-sm font-medium text-center text-white rounded-lg bg-blue-500 hover:bg-blue-700 transition-colors duration-300 focus:ring-4 focus:outline-none focus:ring-primary-300 cursor-pointer">
+            {loading ? "Enviando..." : "Enviar"}
+          </button>
+            
+            {success && <p className="text-green-500 text-sm mt-2">✅ Mensaje enviado con éxito</p>}
+            {error && <p className="text-red-500 text-sm mt-2">❌ Error: {error}</p>}
       </form>
   </div>
 </section>
