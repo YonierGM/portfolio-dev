@@ -32,7 +32,7 @@ export function ProjectDetail(){
                     </div>
                   </div>
                   <div className="descripcion flex flex-col gap-1 mb-4">
-                    <p className="font-light text-gray-500 max-sm:text-lg transition-all">
+                    <p className="font-normal text-[18px] text-gray-800 max-sm:text-lg transition-all">
                       {proyecto.description}
                     </p>
                
