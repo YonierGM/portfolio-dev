@@ -54,13 +54,13 @@ export function About() {
             </p>
           </div>
 
-          <div className="w-1/2 grid grid-cols-2 gap-4">
+          <div className="max-sm:w-full w-1/2 grid grid-cols-2 gap-4">
             
-              <a href="/cv/Yonier_Garcia_Mosquera_cv.pdf" download="Yonier_Garcia_Mosquera_cv.pdf" className="text-white text-center bg-black hover:opacity-85 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 focus:outline-none dark:focus:ring-blue-800">
+              <a href="/cv/Yonier_Garcia_Mosquera_cv.pdf" download="Yonier_Garcia_Mosquera_cv.pdf" className="text-white text-center bg-black hover:opacity-85 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 focus:outline-none dark:focus:ring-blue-800 w-full">
               CV
               </a>
        
-            <Link className="cursor-pointer text-blue-500 hover:text-white border border-blue-500 hover:bg-blue-500 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2" to="/contacto">
+            <Link className="cursor-pointer text-blue-500 hover:text-white border border-blue-500 hover:bg-blue-500 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 w-full" to="/contacto">
               Contactar
             </Link>
           </div>
