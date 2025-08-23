@@ -50,13 +50,13 @@ export function AboutExperience() {
             <div
               key={index}
               className={`p-6 grid grid-rows-[100px_1fr_100px] gap-4 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 ${
-                exp.highlight ? "border-indigo-500 border-2 rounded-2xl bg-white" : "border-white bg-white rounded-2xl"
+                exp.highlight ? "border-blue-500 border-2 rounded-2xl bg-white" : "border-white bg-white rounded-2xl"
               }`}
             >
               <div className="">
                 <div className="flex items-start justify-between mb-2">
                   <div className="font-extrabold text-[18px] text-gray-800 max-sm:text-lg min-sm:text-start">{exp.title}</div>
-                  {exp.highlight && <div className="bg-indigo-400 text-white p-1 rounded-md text-accent-foreground text-xs">Actual</div>}
+                  {exp.highlight && <div className="bg-blue-400 text-white p-1 rounded-md text-accent-foreground text-xs">Actual</div>}
                 </div>
                 <div className="space-y-1">
                   <p className="font-semibold text-[18px] text-gray-800 max-sm:text-lg min-sm:text-start">{exp.company}</p>
