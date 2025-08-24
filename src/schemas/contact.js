@@ -12,7 +12,9 @@ export const formContactSchema = z.object({
         .email({ message: "El correo no es válido" }),
 
     subject: z
-        .string({ required_error: "Selecciona un asunto" }),
+        .string({ required_error: "Selecciona un asunto" })
+        .min(3, { message: "Debe contener mínimo 3 caracteres" })
+        .max(40, { message: "Debe contener máximo 40 caracteres" }),
     
     
     phone: z

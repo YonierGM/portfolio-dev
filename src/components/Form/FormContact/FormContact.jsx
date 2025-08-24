@@ -22,7 +22,7 @@ export function FormContact() {
       await sendToWebhook(data);
       reset();
     } catch {
-      // El error ya está manejado en el hook
+      
     }
   };
 
@@ -82,8 +82,8 @@ export function FormContact() {
             {loading ? "Enviando..." : "Enviar"}
           </button>
             
-            {success && <p className="text-green-500 text-sm mt-2">✅ Mensaje enviado con éxito</p>}
-            {error && <p className="text-red-500 text-sm mt-2">❌ Error: {error}</p>}
+            {/* {success && <p className="text-green-500 text-sm mt-2">✅ Mensaje enviado con éxito</p>}
+            {error && <p className="text-red-500 text-sm mt-2">❌ Error: {error}</p>} */}
       </form>
   </div>
 </section>

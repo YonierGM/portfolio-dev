@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { Loading } from 'notiflix/build/notiflix-loading-aio';
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 export function useN8nWebhook(webhookUrl) {
   const [loading, setLoading] = useState(false);
@@ -9,6 +11,7 @@ export function useN8nWebhook(webhookUrl) {
     setLoading(true);
     setError(null);
     setSuccess(false);
+    Loading.pulse();
 
     try {
       const response = await fetch(webhookUrl, {
@@ -18,16 +21,22 @@ export function useN8nWebhook(webhookUrl) {
       });
 
       if (!response.ok) {
+        Loading.remove();
         throw new Error(`Error en la solicitud: ${response.status}`);
       }
 
       setSuccess(true);
+      Loading.remove();
+      Notify.success('Mensaje enviado con éxito');
       return await response.json();
     } catch (err) {
       setError(err.message);
+      Loading.remove();
+      Notify.failure('Error al enviar el mensaje');
       throw err;
     } finally {
       setLoading(false);
+      Loading.remove();
     }
   };
 

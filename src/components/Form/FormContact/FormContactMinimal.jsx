@@ -15,7 +15,7 @@ export function FormContactMinimal() {
   });
 
   const { sendToWebhook, loading, error, success } = useN8nWebhook(
-    "https://n8n-to6s.onrender.com/webhook/3b91754d-326b-4a8f-a40c-6486656b1341"
+    "https://n8n-to6s.onrender.com/webhook-test/3b91754d-326b-4a8f-a40c-6486656b1341"
   );
 
   const onSubmit = async (data) => {
@@ -53,7 +53,7 @@ export function FormContactMinimal() {
         </div>
         <div>
             <input type="text" {...register("subject")} id="subject" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="asunto" required />
-        {errors.email && (
+        {errors.subject && (
 <p className="text-red-500 text-sm">{errors.subject.message}</p>
 )}
         </div>
@@ -75,8 +75,8 @@ export function FormContactMinimal() {
             {loading ? "Enviando..." : "Enviar"}
           </button>
             
-            {success && <p className="text-green-500 text-sm mt-2">✅ Mensaje enviado con éxito</p>}
-            {error && <p className="text-red-500 text-sm mt-2">❌ Error: {error}</p>}
+            {/* {success && <p className="text-green-500 text-sm mt-2">✅ Mensaje enviado con éxito</p>}
+            {error && <p className="text-red-500 text-sm mt-2">❌ Error: {error}</p>} */}
       </form>
   </div>
 </section>
