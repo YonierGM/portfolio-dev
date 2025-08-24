@@ -15,7 +15,7 @@ export function FormContactMinimal() {
   });
 
   const { sendToWebhook, loading, error, success } = useN8nWebhook(
-    "https://n8n-to6s.onrender.com/webhook-test/3b91754d-326b-4a8f-a40c-6486656b1341"
+    "https://n8n-to6s.onrender.com/webhook/3b91754d-326b-4a8f-a40c-6486656b1341"
   );
 
   const onSubmit = async (data) => {
