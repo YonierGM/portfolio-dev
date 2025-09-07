@@ -1,7 +1,24 @@
 import { useChat } from "../../hooks/useChatN8n";
-
-export default function ChatWidget({ webhookUrl = "https://n8n-to6s.onrender.com/webhook/f07a3696-b524-4320-b59a-de970a97328e" }) {
+import DOMPurify from 'https://www.unpkg.com/dompurify@2.4.0/dist/purify.es.js';
+const webhookUrlChat = import.meta.env.VITE_CHAT_WEBHOOK_URL;
+export default function ChatWidget({ webhookUrl = webhookUrlChat }) {
   const { open, setOpen, messages, input, setInput, loading, messagesRef, sendMessage, handleKeyDown } = useChat(webhookUrl);
+
+  // Función para convertir texto con formato a HTML seguro
+  const formatMessageText = (text) => {
+    // Reemplazar "**texto**" con "<strong>texto</strong>"
+    let formattedText = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+    
+    // Reemplazar los elementos de lista de Markdown (* texto) con <li>texto</li>
+    // Esto se hace antes de manejar los saltos de línea para que se procese correctamente.
+    formattedText = formattedText.replace(/(^|\n)\* (.*?)(?=\n|$)/g, '$1<li>$2</li>');
+    
+    // Reemplazar uno o más saltos de línea consecutivos con un solo <br>
+    formattedText = formattedText.replace(/\n+/g, '<br>');
+
+    // Sanitizar el HTML para evitar ataques XSS
+    return DOMPurify.sanitize(formattedText);
+  };
 
   return (
     <div className="fixed bottom-6 right-6 z-50">
@@ -14,7 +31,7 @@ export default function ChatWidget({ webhookUrl = "https://n8n-to6s.onrender.com
           <span className="text-2xl">👋</span>
           <div className="text-left">
             <div className="text-sm font-semibold leading-none">¡Hola! Soy Yonier</div>
-            <div className="text-xs opacity-90">¿En qué puedo ayudarte?</div>
+            <div className="text-xs opacity-90">hablemos de tech</div>
           </div>
         </button>
       )}
@@ -41,7 +58,10 @@ export default function ChatWidget({ webhookUrl = "https://n8n-to6s.onrender.com
           <div ref={messagesRef} className="flex-1 overflow-auto p-4 space-y-3 bg-gradient-to-b from-white to-gray-50">
             {messages.map((m, i) => (
               <div key={i} className={`flex ${m.sender === "user" ? "justify-end" : "justify-start"}`}>
-                <div className={`${m.sender === "user" ? "bg-blue-600 text-white" : "bg-gray-100 text-gray-800"} max-w-xs md:max-w-md px-4 py-2 rounded-2xl`}>{m.text}</div>
+                <div
+                  className={`${m.sender === "user" ? "bg-blue-600 text-white" : "bg-gray-100 text-gray-800"} max-w-xs md:max-w-md px-4 py-2 rounded-2xl`}
+                  dangerouslySetInnerHTML={{ __html: formatMessageText(m.text) }}
+                ></div>
               </div>
             ))}
             {loading && (
@@ -69,10 +89,13 @@ export default function ChatWidget({ webhookUrl = "https://n8n-to6s.onrender.com
                 Enviar
               </button>
             </div>
-            <div className="text-xs text-gray-400 mt-2 text-center">Disponible: 24/7 · Respuesta estimada en minutos</div>
+            <div className="text-xs text-gray-400 mt-2 text-center">Disponible: 24/7 · Respuestas al instante</div>
           </div>
         </div>
       )}
     </div>
   );
 }
+
+
+

@@ -1,22 +1,15 @@
 import React, { useEffect, useRef, useState } from "react";
 
+// useChat.jsx - Custom hook para la lógica del chat
 export function useChat(webhookUrl) {
   const [open, setOpen] = useState(false);
-  const [messages, setMessages] = useState(() => {
-    try {
-      const cached = localStorage.getItem("chat_messages");
-      return cached ? JSON.parse(cached) : [{ sender: "bot", text: "¡Hola! 👋 Soy Yonier García Mosquera. ¿En qué puedo ayudarte hoy?" }];
-    } catch (e) {
-      return [{ sender: "bot", text: "¡Hola! 👋 Soy Yonier García Mosquera. ¿En qué puedo ayudarte hoy?" }];
-    }
-  });
+  const [messages, setMessages] = useState([{ sender: "bot", text: "¡Hola! 👋 hablemos de Tech ¿Qué quieres saber?" }]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const messagesRef = useRef(null);
 
-  // Hook para guardar mensajes en localStorage y hacer scroll
+  // Hook para hacer scroll al final del chat
   useEffect(() => {
-    localStorage.setItem("chat_messages", JSON.stringify(messages));
     scrollToBottom();
   }, [messages]);
 
@@ -44,7 +37,7 @@ export function useChat(webhookUrl) {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          sessionId: localStorage.getItem("chat_session") || crypto.randomUUID(),
+          sessionId: crypto.randomUUID(),
           action: "sendMessage",
           chatInput: text,
         }),
